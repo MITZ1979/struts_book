@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <!--开启开发模式，这样可以在 jsp 中使用 s:debug 查看变量-->
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.action.extension" value="html" /><!--当value 值是 html 时 booklist.jsp 中的后缀名也必须是.html-->
+
+    <!--图书模块-->
+    <package name="book" extends="struts-default">
+        <!--初始化booklist配制-->
+        <action name="bookinit" method="bookinit" class="action.BookAction">
+           <result type="redirectAction">booklist</result>
+        </action>
+        <!--查询booklist-->
+        <action name="booklist" method="booklist" class="action.BookAction">
+            <result name="success" type="dispatcher">/view/book/booklist.jsp</result>
+        </action>
+        <!--删除-->
+        <action name="bookdel" method="bookdel" class="action.BookAction">
+            <result type="redirectAction">booklist</result>
+        </action>
+        <!--进入添加页面，包含 form -->
+        <!--如果不写 method，默认会调用 execute -->
+        <!--如果不写 class/method，默认会调用 ActionSupport#execute -->
+        <action name="bookadd">
+            <result>/view/book/bookadd.jsp</result>
+        </action>
+
+        <action name="booksave" method="booksave" class="action.BookAction">
+            <result type="redirectAction">booklist</result>
+        </action>
+    </package>
+
+    <package name="childBook" extends="book"></package>
+</struts>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lswj.iml" filepath="$PROJECT_DIR$/.idea/modules/lswj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lswj_main.iml" filepath="$PROJECT_DIR$/.idea/modules/lswj_main.iml" group="lswj" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/lswj_test.iml" filepath="$PROJECT_DIR$/.idea/modules/lswj_test.iml" group="lswj" />
+    </modules>
+  </component>
+</project>
